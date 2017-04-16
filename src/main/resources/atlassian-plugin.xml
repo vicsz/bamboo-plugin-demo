@@ -20,5 +20,9 @@
 
         <context>bamboo-plugin-demo</context>
     </web-resource>
+
+    <taskType key="myFirstTask" name="My First Task" class="com.example.TaskExample">
+        <description>A task that prints 'Hello, World!'</description>
+    </taskType>
     
 </atlassian-plugin>

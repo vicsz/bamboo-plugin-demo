@@ -1,22 +1,18 @@
-You have successfully created an Atlassian Plugin!
+# Sample Bamboo Plugin
 
-Here are the SDK commands you'll use immediately:
-
-* atlas-run   -- installs this plugin into the product and starts it on localhost
-* atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
-* atlas-cli   -- after atlas-run or atlas-debug, opens a Maven command line window:
-                 - 'pi' reinstalls the plugin into the running product instance
-* atlas-help  -- prints description for all commands in the SDK
-
-Full documentation is always available at:
-
-https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
+Requirements include having the atlassian SDK installed.
+https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project
 
 
+# Steps
 
+(After install the Atlassian SDK)
 
+1. From commandline run: *atlas-run*
+2. Go to : localhost:6990/bamboo/
+3. Default login is admin/admin
+4. Plugin will be installed by default.
 
-***** Notes
-
+# Notes
 For IntelliJ intellisense support (for all dependencies to properly resolve in the editor) .. you will need to manually add classpath (in IDE) to Bamboo lib directory at
 /target/bamboo/webapp/lib   (these are the Bamboo jars that will be downloaded after the first succesfuly atlas-run execution).

@@ -23,6 +23,8 @@
 
     <taskType key="myFirstTask" name="My First Task" class="com.example.TaskExample">
         <description>A task that prints 'Hello, World!'</description>
+        <configuration class="com.example.ExampleTaskConfigurator"/>
+        <resource type="freemarker" name="edit" location="taskExample.ftl"/>
     </taskType>
-    
+
 </atlassian-plugin>

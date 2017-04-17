@@ -40,11 +40,13 @@ public class TaskExample implements TaskType
 
         try {
 
+            final String environmetName = taskContext.getConfigurationMap().get("environment");
+
             DeploymentProject deploymentProject = getMatchingDeploymentProject("DeploymentProject");
 
             DeploymentVersion deploymentVersion = deploymentVersionService.getOrCreateDeploymentVersion(deploymentProject.getId(), taskContext.getBuildContext().getParentBuildContext().getPlanResultKey());
 
-            Environment environment = getMatchingEnvironment(deploymentProject, "QA");
+            Environment environment = getMatchingEnvironment(deploymentProject, environmetName);
 
             deploymentExecutionService.prepareDeploymentContext(environment, deploymentVersion, taskContext.getBuildContext().getTriggerReason());
 
